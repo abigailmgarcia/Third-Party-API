@@ -35,7 +35,7 @@ $(document).ready(function () {
     var blockHour = parseInt($(this).attr('id'));
     
     if(blockHour < currentHour){
-      $(this).addClass('.past');
+      $(this).addClass('past');
     } else if ( blockHour === currentHour){
       $(this).addClass('present');
     }else{ 
@@ -51,12 +51,12 @@ $(document).ready(function () {
     var blockId = $(this).attr('id');
     var userInput = localStorage.getItem(blockId);
 
-    $(this).children('description').val(userInput);
+    $(this).children('.description').val(userInput);
   });
 
   // TODO: Add code to display the current date in the header of the page.
   // displays in console log
-  
+
   var today = dayjs();
   $('#currentDay').text(today.format('dddd MMM DD, YYYY'));
   console.log(today);
